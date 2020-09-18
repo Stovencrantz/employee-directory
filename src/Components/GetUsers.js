@@ -30,16 +30,32 @@ class EmployeesContainer extends Component {
         }
 
         return (
+
             <div>
-                {this.state.users.map((user, i) => (
-                    <div key={`user-${i}`}>
-                        <div>{user.name.title}</div>
-                        <div>{user.name.first}</div>
-                        <div>{user.name.last}</div>
-                        <img src={user.picture.large} />
-                    </div>
-                ))}
+            <table className="table table-striped text-center">
+                <thead>
+                    <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">DOB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.users.map((user, i) => (
+                        <tr key={`user-${i}`}>
+                            <th><img src={user.picture.large} alt="Image of a person"/></th>
+                            <td>{user.name.first} {user.name.last}</td>
+                            <td>{user.cell}</td>
+                            <td>{user.email}</td>
+                            <td>{user.dob.date.split("T")[0]}</td>
+                        </tr>
+                    ))}
+                </tbody>
+                </table>
             </div>
+            
         );
     }
 }
