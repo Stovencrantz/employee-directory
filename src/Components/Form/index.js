@@ -1,39 +1,33 @@
-import React, {Component} from 'react'
+import React, { useState } from 'react'
 
-class Form extends Component{
-    state = {
-        person: ""
-    };
+function Form() {
+    const [searchPerson, setSearchPerson] = useState([]);
 
-    handleInputChange = event => {
+    // -----------------------------------------------------
+    // Add functionality for the search bar to filter users eveytime a character is entered
+    // -----------------------------------------------------
+    function handleInputChange (event) {
+        // event.preventDefault();
+
         // Getting the value of the input which triggerred the change
-        const { person } = event.target;
-        console.log("name value: ");
-    }
-
-    handleFormSubmit = event => {
-        // preventing the default behavior of the form submit (Which is refresh page)
-        event.preventDefault();
-        this.setState({
-            person: ""
-        });
+        console.log("Search person: ", event.target.value);
+        setSearchPerson(event.target.value);
     }
     
-    render() {
-        return (
-            <div>
-                <form className="form text-center pb-3">
-                    <input value={this.state.person}
-                    name = "person"
-                    onChange={this.handleInputChange}
-                    type="text"
-                    placeholder="Search here"
-                    />
-                    <button onClick={this.handleFormSubmit}>Submit</button>
-                </form>
-            </div>
-        )
-    }
+    
+    return (
+        <div>
+            <form className="form text-center pb-3">
+                <input value={searchPerson}
+                name = "person"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Search here"
+                />
+            </form>
+        </div>
+    )
+    
 }
 
 export default Form;

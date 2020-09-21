@@ -1,34 +1,34 @@
-import { getDefaultNormalizer } from "@testing-library/react";
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import API from "../utils/API";
+import Form from "../Components/Form/index"
 
-class EmployeesContainer extends Component {
-    state = {
-        users: [],
-        loading: true
-    };
-
-    componentDidMount() {
-        //perform axios call
-            API.search()
-            .then(res => {
-                this.setState({ users: res.data.results, loading: false })
-                console.log("res: ", res.data.results)
-            })
-            .catch(err => console.log(err))
-    }
-    
+function EmployeesContainer () {
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true)
 
 
-    render() {
-        if(this.state.loading) {
+    //perform axios call
+    useEffect( () => {
+        API.populate()
+        .then(res => {
+
+            console.log("res: ", res.data.results)
+            setUsers( res.data.results )
+            
+            setLoading(false)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
+        if(loading) {
             return <div>loading...</div>;
         }
 
-        if(!this.state.users.length) {
+        else if(!users.length) {
             return <div>Didnt get any users</div>;
         }
 
+        else {
         return (
 
             <div>
@@ -43,7 +43,7 @@ class EmployeesContainer extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.users.map((user, i) => (
+                    {users.map((user, i) => (
                         <tr key={`user-${i}`}>
                             <th><img src={user.picture.large} alt="Image of a person"/></th>
                             <td>{user.name.first} {user.name.last}</td>
@@ -59,5 +59,6 @@ class EmployeesContainer extends Component {
         );
     }
 }
+
 
 export default EmployeesContainer;
