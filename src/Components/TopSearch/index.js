@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
-import API from "../utils/API";
+import API from "../../utils/API";
 import { MDBDataTableV5 } from 'mdbreact';
+import "./style.css"
 
 const columns = [
     {
@@ -69,13 +70,6 @@ export default function TopSearch() {
         .catch(err => console.log(err))
     }, [loading])
 
-
-
-
-
-    // console.log("New rows: ", newRows);
-
-
     if(loading) {
         return <div>loading...</div>;
     }
@@ -84,8 +78,6 @@ export default function TopSearch() {
         return <div>Didnt get any users</div>;
     }
     else {
-
-
         return <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} searchTop searchBottom={false} />;
     }
 

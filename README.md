@@ -1,3 +1,77 @@
+# EMPLOYEE DIRECTORY
+
+## MOTIVATION
+
+This application is handy for any individual that has a series of individuals all with unique properties that they want to be able to list and sort through. 
+
+## SCREENSHOTS OF APP:
+
+![MAIN PAGE](public\assets\images\mainPage.PNG)
+
+![SORT BY SEARCH](public\assets\images\searchSort.PNG)
+
+![SORT BY HEADER](public\assets\images\headerSort.PNG)
+
+## HOW TO USE
+
+1. Follow the link to the [deployed application](https://stovencrantz.github.io/employee-directory/)
+2. Use the serach bar to filter employees by a series of characters.
+3. Use the table headers to filter employees in ascending order by that particular header.
+4. Use the 'Rows per page' dropdown to adjust how many employees show on the page at a time.
+5. Use the page navigation buttons at the buttom to traverse the pages of employees.
+
+
+## TECHNOLOGIES
+
+- HTML5
+- CSS3
+- Javascrpit
+  - Bootstrap
+- React
+
+## DEPENDENCIES
+
+- axios
+- bootstrap
+- gh-pages
+- mdbreact
+- react
+- react-dom
+- react-scripts
+
+
+## INSTALLATION
+
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
+
+    # Clone this repository
+    $ git clone git@github.com:Stovencrantz/employee-directory.git
+
+    # Go into the repository
+    $ cd employee-directory
+
+    # Install dependencies
+    $ npm install
+
+    # Run the app
+    $ npm start
+
+## API REFERENCE
+
+[Random USER GENERATOR](https://randomuser.me/)
+
+## CONTRIBUTORS
+ 
+Steve Knapp [GitHub Repository](https://github.com/Stovencrantz)  
+
+
+## LINKS
+
+[Deployed Application](https://stovencrantz.github.io/employee-directory/)
+
+[Project Repository](https://github.com/Stovencrantz/employee-directory)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
