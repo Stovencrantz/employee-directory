@@ -58,7 +58,7 @@ To clone and run this application, you'll need Git and Node.js (which comes with
 
 ## API REFERENCE
 
-[Random USER GENERATOR](https://randomuser.me/)
+[RANDOM USER GENERATOR](https://randomuser.me/)
 
 ## CONTRIBUTORS
  
@@ -71,6 +71,10 @@ Steve Knapp [GitHub Repository](https://github.com/Stovencrantz)
 
 [Project Repository](https://github.com/Stovencrantz/employee-directory)
 
+
+
+***
+***
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
