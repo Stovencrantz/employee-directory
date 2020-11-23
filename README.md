@@ -33,10 +33,13 @@ This application is handy for any individual that has a series of individuals al
 
 ## SCREENSHOTS OF APP:
 
+Main Page
 ![MAIN PAGE](public/assets/images/mainPage.PNG)
 
+Sort by Search Terms
 ![SORT BY SEARCH](public/assets/images/searchSort.PNG)
 
+Sort by Header
 ![SORT BY HEADER](public/assets/images/headerSort.PNG)
 
 
