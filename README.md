@@ -4,14 +4,6 @@
 
 This application is handy for any individual that has a series of individuals all with unique properties that they want to be able to list and sort through. 
 
-## SCREENSHOTS OF APP:
-
-![MAIN PAGE](public\assets\images\mainPage.PNG)
-
-![SORT BY SEARCH](public\assets\images\searchSort.PNG)
-
-![SORT BY HEADER](public\assets\images\headerSort.PNG)
-
 ## HOW TO USE
 
 1. Follow the link to the [deployed application](https://stovencrantz.github.io/employee-directory/)
@@ -26,7 +18,7 @@ This application is handy for any individual that has a series of individuals al
 - HTML5
 - CSS3
 - Javascrpit
-  - Bootstrap
+- Bootstrap
 - React
 
 ## DEPENDENCIES
@@ -38,6 +30,15 @@ This application is handy for any individual that has a series of individuals al
 - react
 - react-dom
 - react-scripts
+
+## SCREENSHOTS OF APP:
+
+![MAIN PAGE](public/assets/images/mainPage.PNG)
+
+![SORT BY SEARCH](public/assets/images/searchSort.PNG)
+
+![SORT BY HEADER](public/assets/images/headerSort.PNG)
+
 
 
 ## INSTALLATION
